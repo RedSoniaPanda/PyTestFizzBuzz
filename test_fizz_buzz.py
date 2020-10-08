@@ -16,5 +16,9 @@ def test_return_fizz(fizz_buzz_class, test_input, expected):
     assert fizz_buzz_class.fizz(test_input) == expected
 
 
+def test_return_buzz(fizz_buzz_class):
+    assert fizz_buzz_class.buzz(5) == 'Buzz'
+
+
 if __name__ == '__main__':
     pytest.main()
