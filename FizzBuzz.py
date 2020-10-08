@@ -20,7 +20,7 @@ class FizzBuzz:
         return self.EMPTY_STRING
 
     def fizz_buzz(self, user_number: str) -> str:
-        if re.match('\d*', user_number):
+        if re.match(r'\d*', user_number):
             user_number = int(user_number)
             return_string = self.fizz(user_number)
             return_string += self.buzz(user_number)
