@@ -16,8 +16,9 @@ def test_return_fizz(fizz_buzz_class, test_input, expected):
     assert fizz_buzz_class.fizz(test_input) == expected
 
 
-def test_return_buzz(fizz_buzz_class):
-    assert fizz_buzz_class.buzz(5) == 'Buzz'
+@pytest.mark.parametrize("test_input,expected", [(5, 'Buzz'), (10, 'Buzz'), (15, 'Buzz')])
+def test_return_buzz(fizz_buzz_class, test_input, expected):
+    assert fizz_buzz_class.buzz(test_input) == expected
 
 
 if __name__ == '__main__':
